@@ -14,6 +14,13 @@ public void createBoard() {   //Initialized createBoard method
             board[i]=' ';
         }
 }
+public static void showBoard(char[] board){
+        System.out.println("\n" + board[1] +  " | " + board[2] +  " | " + board[3]);
+        System.out.println("------------");
+        System.out.println(" " + board[4] +  " | " + board[5] + " | " + board[6]);
+        System.out.println("------------");
+        System.out.println(" " + board[7] +  " | " + board[8] + " | " + board[9]);
+}
 public void turn() {
         System.out.println("Enter your choice X or O: ");
         Scanner sc = new Scanner(System.in);
@@ -39,5 +46,6 @@ public void turn() {
         T.createBoard();
         System.out.println("Board is Initialized");
         T.turn();
+        showBoard(T.board);
     }
 }
